@@ -1,0 +1,64 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "tap",
+    "start": "node",
+    "dev": "nodemon | npx pino-pretty"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregdaynes/chat.git"
+  },
+  "author": "Gregory Daynes <gregdaynes@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gregdaynes/chat/issues"
+  },
+  "homepage": "https://github.com/gregdaynes/chat#readme",
+  "devDependencies": {
+    "@istanbuljs/esm-loader-hook": "^0.1.2",
+    "eslint": "^7.31.0",
+    "nodemon": "^2.0.12",
+    "pino-pretty": "^5.1.2",
+    "prettier": "^2.3.2",
+    "sinon": "^11.1.1",
+    "tap": "^15.0.9"
+  },
+  "dependencies": {
+    "desm": "^1.1.0",
+    "env-schema": "^3.1.0",
+    "fastify": "^3.19.2",
+    "fastify-autoload": "^3.8.0",
+    "fastify-plugin": "^3.0.0",
+    "fastify-sensible": "^3.1.1",
+    "fluent-json-schema": "^3.0.1"
+  },
+  "tap": {
+    "node-arg": [
+      "--no-warnings",
+      "--experimental-loader",
+      "@istanbuljs/esm-loader-hook"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 12
+    },
+    "env": {
+      "es6": true,
+      "node": true,
+      "browser": true
+    },
+    "rules": {}
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  }
+}
